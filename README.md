@@ -32,7 +32,7 @@ Shoplytics is a simple analytics dashboard built using **Node.js (Express)** and
 ---
 
 ## 📂 Project Structure
-##
+''
 shopify-embedded-app/
 │
 ├── backend/
