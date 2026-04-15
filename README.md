@@ -32,6 +32,7 @@ Shoplytics is a simple analytics dashboard built using **Node.js (Express)** and
 ---
 
 ## 📂 Project Structure
+##
 shopify-embedded-app/
 │
 ├── backend/
@@ -46,7 +47,7 @@ shopify-embedded-app/
 │   └── package.json
 │
 └── README.md
-⚙️ Environment Variables
+## ⚙️ Environment Variables
 
 Create a .env file inside the backend folder:
 
@@ -57,8 +58,8 @@ ADMIN_API_TOKEN=your_access_token
 
 SCOPES=read_products,read_orders
 HOST=http://localhost:5000
-▶️ Running the Project
-1️⃣ Start Backend
+## ▶️ Running the Project
+## 1️⃣ Start Backend
 cd backend
 npm install
 npm run dev
@@ -66,7 +67,7 @@ npm run dev
 Backend runs at:
 
 http://localhost:5000
-2️⃣ Start Frontend
+## 2️⃣ Start Frontend
 cd frontend
 npm install
 npm run dev
@@ -74,7 +75,7 @@ npm run dev
 Frontend runs at:
 
 http://localhost:5173
-🔐 Authentication Flow
+## 🔐 Authentication Flow
 
 This project uses a manual OAuth flow:
 
