@@ -1,38 +1,57 @@
-# 🛍️ Shoplytics – Shopify Analytics Dashboard
+# 🛍️ Shoplytics
 
-Shoplytics is a simple analytics dashboard built using **Node.js (Express)** and **React (Vite)** that connects to a Shopify store and displays key metrics like revenue and order count.
+### Shopify Analytics Dashboard
+
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Shopify](https://img.shields.io/badge/Shopify-API-7AB55C)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 🚀 Features
+## 📌 Overview
 
-- 📊 Fetch Shopify Orders using GraphQL Admin API
-- 💰 Calculate total revenue
-- 📦 Display total orders
-- 🛒 Fetch products list
-- ⚡ Fast frontend with React + Vite
-- 🔗 Backend API with Express
+**Shoplytics** is a full-stack web application that connects to a Shopify store and provides key business insights such as:
+
+* 📊 Total Revenue
+* 📦 Order Count
+* 🛒 Product Data
+
+Built using **React (Vite)** and **Node.js (Express)** with Shopify’s **GraphQL Admin API**.
+
+---
+
+## ✨ Features
+
+* 📈 Real-time Shopify analytics
+* 💰 Revenue calculation
+* 📦 Order tracking
+* 🛍️ Product listing
+* ⚡ Fast and lightweight UI
 
 ---
 
 ## 🧱 Tech Stack
 
-### Frontend
-- React (Vite)
-- JavaScript (ES6+)
+### 🔹 Frontend
 
-### Backend
-- Node.js
-- Express.js
-- Axios / Fetch
+* React (Vite)
+* JavaScript (ES6)
 
-### API
-- Shopify Admin GraphQL API
+### 🔹 Backend
+
+* Node.js
+* Express.js
+
+### 🔹 API
+
+* Shopify Admin GraphQL API
 
 ---
 
-## 📂 Project Structure
-''
+## 📁 Project Structure
+
+```
 shopify-embedded-app/
 │
 ├── backend/
@@ -47,10 +66,15 @@ shopify-embedded-app/
 │   └── package.json
 │
 └── README.md
+```
+
+---
+
 ## ⚙️ Environment Variables
 
-Create a .env file inside the backend folder:
+Create a `.env` file inside the backend folder:
 
+```
 SHOP=your-store-name.myshopify.com
 SHOPIFY_API_KEY=your_api_key
 SHOPIFY_API_SECRET=your_api_secret
@@ -58,64 +82,120 @@ ADMIN_API_TOKEN=your_access_token
 
 SCOPES=read_products,read_orders
 HOST=http://localhost:5000
-## ▶️ Running the Project
-## 1️⃣ Start Backend
+```
+
+---
+
+## ▶️ Getting Started
+
+### 1️⃣ Clone Repository
+
+```
+git clone https://github.com/your-username/shoplytics.git
+cd shoplytics
+```
+
+---
+
+### 2️⃣ Start Backend
+
+```
 cd backend
 npm install
 npm run dev
+```
 
-Backend runs at:
+👉 Runs on: http://localhost:5000
 
-http://localhost:5000
-## 2️⃣ Start Frontend
+---
+
+### 3️⃣ Start Frontend
+
+```
 cd frontend
 npm install
 npm run dev
+```
 
-Frontend runs at:
+👉 Runs on: http://localhost:5173
 
-http://localhost:5173
+---
+
 ## 🔐 Authentication Flow
 
-This project uses a manual OAuth flow:
+This project uses a **manual OAuth flow**:
 
-Open:
+1. Open:
+
+```
 http://localhost:5000/auth?shop=your-store.myshopify.com
-Approve app installation
-Shopify redirects to:
+```
+
+2. Approve the app
+
+3. Shopify redirects to:
+
+```
 /auth/callback
-Access token is generated and used for API requests
-📡 API Endpoints
-🔹 GET /api/analytics
+```
 
-Returns total revenue and order count.
+4. Access token is generated
 
-Example:
+---
 
+## 📡 API Endpoints
+
+### 🔹 GET /api/analytics
+
+Returns revenue and order count
+
+```
 {
   "revenue": 1200,
   "orders": 25
 }
-🔹 GET /api/products
+```
 
-Returns a list of products from Shopify.
+---
 
-⚠️ Known Limitations
-Manual OAuth setup required
-Access token stored in memory (not secure for production)
-App must be reinstalled after changing API scopes
-Requires Shopify Admin API permissions (read_orders, read_products)
-🛠️ Future Improvements
-Integrate Shopify CLI authentication
-Store tokens securely (database)
-Add charts for analytics (Chart.js / Recharts)
-Improve UI/UX with Shopify Polaris
-Deploy to cloud (Vercel / AWS / Render)
-👨‍💻 Author
+### 🔹 GET /api/products
 
-Josmy Mathew
+Returns Shopify product list
+
+---
+
+## ⚠️ Limitations
+
+* Manual OAuth setup required
+* Token stored in memory (not production safe)
+* Requires correct Shopify scopes
+* App reinstall needed after scope changes
+
+---
+
+## 🚀 Future Improvements
+
+* Shopify CLI integration
+* Secure token storage (DB)
+* Data visualization (charts)
+* UI improvements using Shopify Polaris
+* Deployment (AWS / Vercel)
+
+---
+
+## 📸 Screenshots
+
+*Add screenshots here*
+
+---
+
+## 👨‍💻 Author
+
+**Josmy Mathew**
 MSc Data Science, AI & Digital Business
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
